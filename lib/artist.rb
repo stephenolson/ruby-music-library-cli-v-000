@@ -17,6 +17,7 @@ class Artist
     
     # creates a 'songs' property set to an empty array (artist has many songs)
     @songs = [ ]
+    
   end
   
   def self.all
@@ -61,6 +62,10 @@ class Artist
     # does not return duplicate genres if the artist has more than one song of a particular genre (artist has many genres through songs)
     #collects artists through its songs instead of maintaining its own @artists instance variable (genre has many artists through songs)
     songs.collect(&:genre).uniq
+    
+    binding.pry
+    
   end
+  
   
 end
